@@ -130,6 +130,7 @@ import { ref } from "vue";
 import image1 from '../assets/images/s1.jpg'
 import image2 from '../assets/images/s2.jpg'
 import image3 from '../assets/images/s3.jpg'
+import ItemDetails from './ItemDetails.vue';
 
 import { toast } from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
@@ -146,6 +147,7 @@ import {
   LayoutGrid,
   Camera,
 } from "lucide-vue-next";
+import { Images } from 'lucide-vue-next';
 
 // Reactive state
 const selectedItem = ref(null);
@@ -191,11 +193,11 @@ const clothes = ref([
     price: "₹2,999",
     image: image1,
     wardrobeItems: [
-      { id: "w1", name: "Black Cotton Shirt", matchScore: 92, image: "/api/placeholder/225/400" },
-      { id: "w2", name: "Navy Blue Blazer", matchScore: 88, image: "/api/placeholder/225/400" },
-      { id: "w3", name: "White Dress Shirt", matchScore: 85, image: "/api/placeholder/225/400" },
-      { id: "w4", name: "Grey Sweater", matchScore: 82, image: "/api/placeholder/225/400" },
-      { id: "w5", name: "Denim Jacket", matchScore: 80, image: "/api/placeholder/225/400" },
+      { id: "w1", name: "Black Cotton Shirt", matchScore: 92, image: image1 },
+      { id: "w2", name: "Navy Blue Blazer", matchScore: 88, image: image2 },
+      { id: "w3", name: "White Dress Shirt", matchScore: 85, image: image3 },
+      { id: "w4", name: "Grey Sweater", matchScore: 82, image: image1 },
+      { id: "w5", name: "Denim Jacket", matchScore: 80, image: image3 },
     ],
   },
   {
@@ -205,8 +207,11 @@ const clothes = ref([
     price: "₹3,499",
     image: image2,
     wardrobeItems: [
-      { id: "w1", name: "Black Cotton Shirt", matchScore: 92, image: "/api/placeholder/225/400" },
-      { id: "w2", name: "Navy Blue Blazer", matchScore: 88, image: "/api/placeholder/225/400" },
+      { id: "w1", name: "Black Cotton Shirt", matchScore: 92, image: image1 },
+      { id: "w2", name: "Navy Blue Blazer", matchScore: 88, image: image3 },
+      { id: "w3", name: "White Dress Shirt", matchScore: 85, image: image2 },
+      { id: "w4", name: "Grey Sweater", matchScore: 82, image: image1 },
+      { id: "w5", name: "Denim Jacket", matchScore: 80, image: image3 },
     ],
   },
   {
@@ -216,8 +221,10 @@ const clothes = ref([
     price: "₹2,499",
     image: image3 ,
     wardrobeItems: [
-      { id: "w1", name: "Black Cotton Shirt", matchScore: 92, image: "/api/placeholder/225/400" },
-      { id: "w3", name: "White Dress Shirt", matchScore: 85, image: "/api/placeholder/225/400" },
+      { id: "w1", name: "Black Cotton Shirt", matchScore: 92, image: image1 },
+      { id: "w3", name: "White Dress Shirt", matchScore: 85, image: image2 },
+      { id: "w4", name: "Grey Sweater", matchScore: 82, image: image1 },
+      { id: "w5", name: "Denim Jacket", matchScore: 80, image: image3 },
     ],
   },
 ]);
